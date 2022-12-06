@@ -427,7 +427,7 @@ export default {
 
       settings: {
         "autoplay": true,
-        "autoplaySpeed": 2000,
+        "autoplaySpeed": 6000,
         "dots": false,
         "dotsClass": "slick-dots custom-dot-class",
         "edgeFriction": 0.35,
@@ -472,8 +472,8 @@ export default {
   mounted() {
     this.autoplay();
     this.intervalId = setInterval(() => {
-      this.value += 3;
-    }, 60);
+      this.value += 1;
+    }, 20);
   },
   destroyed() {
     clearInterval(this.intervalId);

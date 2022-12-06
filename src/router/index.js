@@ -30,6 +30,29 @@ const routes = [
     name: 'Trainings',
     component: () => import( '../views/Trainings.vue')
   },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import( '../views/Auth/Login/Login')
+  },
+  {
+    path: '/email-login',
+    name: 'EmailLogin',
+    component: () => import( '../views/Auth/Login/EmailForm')
+  },
+  {
+    path: '/registration',
+    name: 'EmailRegistration',
+    component: () => import( '../views/Auth/Registration/Registration')
+  },
+
+    //Profile
+
+  {
+    path: '/profile',
+    name: 'MainProfile',
+    component: () => import( '../views/Auth/ProfileStudent/index')
+  },
 ]
 
 const router = new VueRouter({

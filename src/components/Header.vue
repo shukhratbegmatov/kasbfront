@@ -35,7 +35,7 @@
               </div>
               <div class="user_action">
                 <div>
-                  <router-link to="/" class="decoration">
+                  <router-link to="/login" class="decoration">
                     <div>
                       Профиль
                     </div>
