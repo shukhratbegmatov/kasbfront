@@ -213,7 +213,7 @@ footer{
 .bg_margin{
     /*margin-left: 118px;*/
     /*margin-top: 300px;*/
-    /*background: rgba(0,0,0,0.3);*/
+    background: rgba(0,0,0,0.6);
     z-index: 33;
     width: 100%;
     height: 100%;
@@ -1623,7 +1623,6 @@ h1{
 }
 .profile_card{
     width: 100%;
-    height: 740px;
     background: #F8F8F8;
     border-radius: 20px;
 }
@@ -1726,9 +1725,12 @@ h1{
 .form_image{
     position: relative;
 }
+.form_image .img_prof{
+    width: 100%;
+}
 .form_image label{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: #365AB7;
     z-index: 33;
     display: flex;
@@ -1737,7 +1739,130 @@ h1{
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    right: -20px;
+    right: -10px;
     bottom: 10px;
 
+}
+.change_bio input{
+    width: 100%;
+    height: 40px;
+    background: rgba(220, 220, 220, 0.5);
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    padding-left: 8px;
+    margin-top: 10px;
+}
+.clear_img label{
+    width: 100%;
+    height: 40px;
+    background: #DCDCDC;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.change_password_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #2B2B2B;
+    margin-top: 40px;
+}
+.change_password{
+    width: 100%;
+    background: #DCDCDC;
+    border-radius: 20px;
+    margin-top: 14px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+
+}
+.change_input_p{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #D9D9D9;
+    border: 1px solid #2B2B2B;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+
+
+}
+.change_input_p input{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: 0;
+}
+.change_input_p input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #2B2B2B;
+}
+.change_btn{
+    width: 100%;
+}
+.test_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #2B2B2B;
+}
+.test_desc{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #2B2B2B;
+    margin-top: 30px;
+}
+.test_btn button{
+
+    background: #E5B25E;
+    border-radius: 5px;
+    width: 154px;
+    height: 39px;
+    border: 0;
+    outline: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #2B2B2B;
+    margin-top: 22px;
+}
+.test_body{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
 }

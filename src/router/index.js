@@ -53,6 +53,12 @@ const routes = [
     name: 'MainProfile',
     component: () => import( '../views/Auth/ProfileStudent/index')
   },
+
+  {
+    path: '/test-result',
+    name: 'TestResult',
+    component: () => import( '../views/Auth/ProfileStudent/testresult.vue')
+  },
 ]
 
 const router = new VueRouter({
