@@ -47,7 +47,7 @@
               v-for="(ban, i) in 4"
               :key="i"
               id="sliderProgress"
-              :class="{ active: activeIndex == i }"
+              :class="{ 'active': activeIndex == i }"
               :options="options"
               :value="activeIndex === i ? value : 15"
           />
@@ -395,7 +395,7 @@ export default {
   data() {
     return {
       sliderValue: 50,
-      value:15,
+      value:0,
       activeIndex: 0,
       delay: 2000,
       time: 0,
@@ -415,7 +415,7 @@ export default {
         },
         layout: {
           height: 12,
-          width: 44,
+          width: 12,
           verticalTextAlign: 61,
           horizontalTextAlign: 43,
           zeroOffset: 0,
@@ -440,23 +440,39 @@ export default {
   },
   methods: {
     prev() {
+
+      clearTimeout(this.timeId);
+      if (this.activeIndex === 0) {
+        this.activeIndex = 3;
+      } else {
+        this.activeIndex -= 1;
+      }
+      this.autoplay();
       this.$refs.carousel.prev()
     },
     next() {
+
+      clearTimeout(this.timeId);
+      if (this.activeIndex === 3) {
+        this.activeIndex = 0;
+      } else {
+        this.activeIndex += 1;
+      }
+      this.autoplay();
       this.$refs.carousel.next()
     },
     autoplay() {
       this.time = 0;
       this.timeId = setTimeout(() => {
         this.time = this.delay;
-      }, this.delay);
+      }, 2000);
     },
   },
 
   mounted() {
     this.autoplay();
     this.intervalId = setInterval(() => {
-      this.value += 2;
+      this.value += 3;
     }, 60);
   },
   destroyed() {
@@ -470,7 +486,7 @@ export default {
       }
     },
     activeIndex() {
-      this.value = 15;
+      this.value = 0;
     },
   },
 

@@ -1204,3 +1204,13 @@ h1{
     width: auto;
     margin-right: 12px;
 }
+
+.vuejs-progress-bar.active svg{
+    width: 42px !important;
+    border-radius: 5px;
+}
+
+.vuejs-progress-bar svg{
+    width: 12px !important;
+    border-radius: 50%;
+}
