@@ -26,7 +26,7 @@
               </router-link>
             </div>
             <div class="profiles_link">
-              <router-link to="/trainings" class="decoration">
+              <router-link to="/tab/trainings" class="decoration">
                 Kurslar
               </router-link>
             </div>

@@ -48,31 +48,15 @@
           </div>
         </div>
         <div class="col-xl-8">
-          <div class="profile_card">
-            <div class="row">
-              <div class="col-xl-8">
-                <div class="title_pro_card">
-                  TEst Natijalari
-                </div>
-                <div class="test_body">
-                  <div>
-                    <div class="test_title">Tartib</div>
-                    <div class="test_desc">#</div>
-                  </div>
-                  <div>
-                    <div class="test_title">	Test vaqti</div>
-                    <div class="test_desc">2022-09-26 17:42</div>
-                  </div>
-                  <div>
-                    <div class="test_title">
-                      Ko‘rish
-                    </div>
-                    <div class="test_btn">
-                      <button>Saqlash</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="wish_card">
+            <div class="wish_title">MEning REzumeyim</div>
+            <div class="wish_description">
+              Oson va tushunarli konstruktor yordamida bir necha daqiqada rezyume yarating, shaxsiy ma’lumotlarni
+              kiriting va rezyumeni yuklab oling!
+
+            </div>
+            <div class="wish_link">
+              <router-link to="/" class="decoration">Boshlash</router-link>
             </div>
           </div>
         </div>
@@ -84,6 +68,7 @@
 <script>
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
+
 export default {
   components: {Footer, Header}
 }

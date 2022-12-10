@@ -48,31 +48,26 @@
           </div>
         </div>
         <div class="col-xl-8">
-          <div class="profile_card">
-            <div class="row">
-              <div class="col-xl-8">
-                <div class="title_pro_card">
-                  TEst Natijalari
-                </div>
-                <div class="test_body">
-                  <div>
-                    <div class="test_title">Tartib</div>
-                    <div class="test_desc">#</div>
+          <div class="tab_card">
+            <h1>TAnlangan KURslar</h1>
+          </div>
+          <div class="row">
+            <div class="col-xl-4" v-for="(item,index) in 12" :key="index">
+              <router-link to="/" class="decoration">
+                <div class="tab_card_main">
+                  <div class="tab_card_title">
+                    Ishga joylashishda muvaffaqiyatga erishish
                   </div>
-                  <div>
-                    <div class="test_title">	Test vaqti</div>
-                    <div class="test_desc">2022-09-26 17:42</div>
-                  </div>
-                  <div>
-                    <div class="test_title">
-                      Ko‘rish
+                  <div class="tab_card_body">
+                    <div class="tab_card_name">
+                      iTSM
                     </div>
-                    <div class="test_btn">
-                      <button>Saqlash</button>
+                    <div class="tab_card_img">
+                      <img src="../../../assets/images/rectangle78.png" alt="">
                     </div>
                   </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>

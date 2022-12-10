@@ -59,6 +59,24 @@ const routes = [
     name: 'TestResult',
     component: () => import( '../views/Auth/ProfileStudent/testresult.vue')
   },
+
+  {
+    path: '/tab/trainings',
+    name: 'TestResult',
+    component: () => import( '../views/Auth/ProfileStudent/trainings')
+  },
+  {
+    path: '/wishlist',
+    name: 'TestResult',
+    component: () => import( '../views/Auth/ProfileStudent/wishlist')
+  },
+
+  {
+    path: '/my-resume',
+    name: 'TestResult',
+    component: () => import( '../views/Auth/ProfileStudent/my-resume')
+  },
+
 ]
 
 const router = new VueRouter({
