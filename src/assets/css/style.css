@@ -1953,3 +1953,75 @@ h1{
     text-transform: uppercase;
     color: #2B2B2B;
 }
+.start_test h1{
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+
+    color: #2B2B2B;
+    margin-top: 50px;
+
+}
+.start_test_description{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin-top: 40px;
+    color: #000000;
+
+}
+.start_test_card{
+    background: #F8F8F8;
+    border-radius: 20px;
+    padding: 47px;
+    margin-top: 20px;
+}
+.start_test_c_title{
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: capitalize;
+
+    color: #000000;
+
+}
+.start_test_c_description{
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #2B2B2B;
+
+}
+.logo_img_s{
+    margin-top: 166px;
+}
+.start_link{
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.start_link a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #2B2B2B;
+    background: #E6B25E;
+    border-radius: 5px;
+    padding: 20px 35px;
+}

@@ -76,6 +76,11 @@ const routes = [
     name: 'TestResult',
     component: () => import( '../views/Auth/ProfileStudent/my-resume')
   },
+  {
+    path: '/start-test',
+    name: 'TestResult',
+    component: () => import( '../views/Quiz/start-test')
+  },
 
 ]
 
