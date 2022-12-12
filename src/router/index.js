@@ -81,6 +81,11 @@ const routes = [
     name: 'TestResult',
     component: () => import( '../views/Quiz/start-test')
   },
+  {
+    path: '/on-test',
+    name: 'TestResult',
+    component: () => import( '../views/Quiz/on-test')
+  },
 
 ]
 

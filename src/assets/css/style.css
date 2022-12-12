@@ -2025,3 +2025,130 @@ h1{
     border-radius: 5px;
     padding: 20px 35px;
 }
+.on-test-count{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #2B2B2B;
+    text-align: center;
+    margin-top: 62px;
+
+}
+.on-test-range{
+    display: flex;
+    justify-content: center;
+}
+.on-test-range .range-slider-knob{
+    display: none;
+}
+.on-test-range .range-slider-rail{
+    height: 12px;
+}
+.on-test-range .range-slider-fill{
+    height: 12px;
+}
+.on-test-range .range-slider{
+    width: 800px;
+}
+.on-test-card{
+    background: #F8F8F8;
+    border-radius: 20px;
+    padding: 40px 109px;
+    margin-top: 34px;
+    margin-bottom: 50px;
+}
+.on-test-values{
+    margin-top: 40px;
+    text-align: center;
+}
+.on-test-values button{
+    width: 50px;
+    height: 50px;
+    background: #D9D9D9;
+    border: 0;
+    outline: none;
+    margin-right: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: #2B2B2B;
+
+}
+.on-test-values button:last-child{
+    margin-right: 0;
+}
+
+.on-test-quiz{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    color: #2B2B2B;
+}
+.on-test-button .prev{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #E5B25E;
+}
+.on-test-button .next{
+
+    width: 220px;
+    height: 60px;
+    background: #E5B25E;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #2B2B2B;
+
+}
+.on-test-button .next{
+    margin-left: 30px;
+}
+.on-test-button .next svg{
+    margin-left: 14px;
+}
+.on-test-button .prev{
+    width: 220px;
+    height: 60px;
+    border: 3px solid #2B2B2B;
+    border-radius: 20px;
+}
+.on-test-button .prev svg{
+    margin-right: 14px;
+}
+.on-test-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.on-test-values button:hover{
+    background: rgb(110, 115, 129);
+    color: rgb(255, 255, 255);
+}

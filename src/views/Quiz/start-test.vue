@@ -21,7 +21,7 @@
             </div>
           </div>
           <div class="start_link">
-            <router-link to="/" class="decoration">
+            <router-link to="/on-test" class="decoration">
               SINOVDAN O’TING
             </router-link>
           </div>
