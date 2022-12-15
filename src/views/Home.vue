@@ -73,7 +73,7 @@
               </div>
               <div class="link_group">
                 <div>
-                  <router-link class="link_main decoration" to="/">
+                  <router-link class="link_main decoration" to="/start-test">
                     <div>
                       SINOVDAN O’TING
                     </div>

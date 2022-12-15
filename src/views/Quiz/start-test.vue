@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="start_link">
-            <router-link to="/" class="decoration">
+            <router-link to="/to-test" class="decoration">
               SINOVDAN O’TING
             </router-link>
           </div>
@@ -81,7 +81,7 @@
             </div>
           </div>
           <div class="start_link">
-            <router-link to="/" class="decoration">
+            <router-link to="/there-test" class="decoration">
               SINOVDAN O’TING
             </router-link>
           </div>

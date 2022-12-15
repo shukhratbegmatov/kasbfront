@@ -10,12 +10,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-search-select/dist/VueSearchSelect.css'
 import ProgressBar from 'vuejs-progress-bar'
 Vue.use(ProgressBar)
+import './views/Teacher/css/teacherstyles.css'
 import './assets/css/style.css'
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 Vue.config.productionTip = false
+
+import VueApexCharts from 'vue-apexcharts'
+Vue.use(VueApexCharts)
+
+Vue.component('apexchart', VueApexCharts)
 
 new Vue({
   router,

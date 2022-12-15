@@ -86,6 +86,29 @@ const routes = [
     name: 'TestResult',
     component: () => import( '../views/Quiz/on-test')
   },
+  {
+    path: '/to-test',
+    name: 'TestResult',
+    component: () => import( '../views/Quiz/to-test')
+  },
+  {
+    path: '/there-test',
+    name: 'TestResult',
+    component: () => import( '../views/Quiz/three')
+  },
+
+    //Teachers page
+
+  {
+    path: '/teacher-login',
+    name: 'TestResult',
+    component: () => import( '../views/Teacher/login')
+  },
+  {
+    path: '/teacher-dashboard',
+    name: 'TestResult',
+    component: () => import( '../views/Teacher/index')
+  },
 
 ]
 
