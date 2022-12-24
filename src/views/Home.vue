@@ -56,12 +56,12 @@
     </section>
     <section>
       <div class="second_section">
-        <div class="left_img">
-          <img src="../assets/logo/image6.svg" alt="">
-        </div>
-        <div class="right_img">
-          <img src="../assets/logo/image5.svg" alt="">
-        </div>
+<!--        <div class="left_img">-->
+<!--          <img src="../assets/logo/image6.svg" alt="">-->
+<!--        </div>-->
+<!--        <div class="right_img">-->
+<!--          <img src="../assets/logo/image5.svg" alt="">-->
+<!--        </div>-->
         <div class="container">
           <div class="row">
             <div class="col-xl-6">
@@ -434,7 +434,7 @@ export default {
         "infinite": true,
         "speed": 500,
         "slidesToShow": 1,
-        "slidesToScroll": 1
+        "slidesToScroll": 1,
       }
     }
   },

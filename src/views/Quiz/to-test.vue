@@ -43,11 +43,11 @@
                   <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 8L1 8M8 15L1 8L8 1" stroke="#E5B25E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
+                  <span>Odldingisi</span>
 
-                  Odldingisi
                 </button>
                 <button class="next" @click="nextStart()">
-                  Keyngisi
+                  <span>Keyngisi</span>
                   <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 8H17M10 1L17 8L10 15" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>

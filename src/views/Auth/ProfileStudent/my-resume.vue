@@ -3,61 +3,16 @@
     <Header></Header>
 
     <div class="container">
-      <h1 class="text-center h1_main">Profil</h1>
+      <div class="profile_title">
+        Мои  профил
+      </div>
       <div class="row">
-        <div class="col-xl-4">
-          <div class="profile_link">
-            <div class="pro_count">
-              <div class="main_count">
-                <div class="count_m">112</div>
-                <div class="count_t">раз зашли</div>
-              </div>
-            </div>
-          </div>
-          <div class="prof_link_card">
-            <div class="profiles_link">
-              <router-link to="/profile" class="decoration">
-                Shaxsiy ma’Lumotlar
-              </router-link>
-            </div>
-            <div class="profiles_link">
-              <router-link to="/test-result" class="decoration">
-                TEst natijalari
-              </router-link>
-            </div>
-            <div class="profiles_link">
-              <router-link to="/tab/trainings" class="decoration">
-                Kurslar
-              </router-link>
-            </div>
-            <div class="profiles_link">
-              <router-link to="/wishlist" class="decoration">
-                Tanlangan Kurslar
-              </router-link>
-            </div>
-            <div class="profiles_link">
-              <router-link to="/my-resume" class="decoration">
-                MEning Rezumeyim
-              </router-link>
-            </div>
-            <div class="profiles_link">
-              <router-link to="/" class="decoration">
-                Chiqish
-              </router-link>
-            </div>
-          </div>
+        <div class="col-xl-3">
+          <SidebarMain></SidebarMain>
         </div>
-        <div class="col-xl-8">
-          <div class="wish_card">
-            <div class="wish_title">MEning REzumeyim</div>
-            <div class="wish_description">
-              Oson va tushunarli konstruktor yordamida bir necha daqiqada rezyume yarating, shaxsiy ma’lumotlarni
-              kiriting va rezyumeni yuklab oling!
+        <div class="col-xl-9">
+          <div class="resume_body">
 
-            </div>
-            <div class="wish_link">
-              <router-link to="/" class="decoration">Boshlash</router-link>
-            </div>
           </div>
         </div>
       </div>
@@ -68,8 +23,8 @@
 <script>
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
-
+import SidebarMain from "../../../components/SidebarMain";
 export default {
-  components: {Footer, Header}
+  components: {SidebarMain, Footer, Header}
 }
 </script>

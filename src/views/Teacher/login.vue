@@ -7,7 +7,7 @@
       <div class="login_forms">
         <div>
           <div class="text_login">O'qituvchi tizimiga kirish</div>
-          <form>
+          <form @submit.prevent="login()">
             <div>
               <input type="text" placeholder="Username">
             </div>
@@ -25,3 +25,12 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods:{
+    login(){
+      this.$router.push('/teacher-dashboard')
+    }
+  }
+}
+</script>

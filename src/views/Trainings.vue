@@ -24,7 +24,7 @@
           <div class="col-xl-3">
             <div class="filt_category">
               <div class="filt_category_title">
-                <button>
+                <button v-b-toggle.collapse-1>
                   Kursning hajmi bo'yicha
 
                   <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,28 +33,30 @@
 
                 </button>
               </div>
-              <div class="filt_category_body">
+              <b-collapse id="collapse-1" >
+               <div class="filt_category_body">
                 <input type="radio" id="input_filt">
                 <label for="input_filt">
                   5ta darsgacha
                 </label>
               </div>
-              <div class="filt_category_body">
+               <div class="filt_category_body">
                 <input type="radio" id="input_filt1">
                 <label for="input_filt">
                   6tadan 15tagacha
                 </label>
               </div>
-              <div class="filt_category_body">
+               <div class="filt_category_body">
                 <input type="radio" id="input_filt2">
                 <label for="input_filt">
                   16tadan ko’p
                 </label>
               </div>
+              </b-collapse>
             </div>
             <div class="filt_category">
               <div class="filt_category_title">
-                <button>
+                <button v-b-toggle.collapse-2>
                   Kursning hajmi bo'yicha
 
                   <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +65,7 @@
 
                 </button>
               </div>
+              <b-collapse id="collapse-2" >
               <div class="filt_category_body">
                 <input type="radio" id="input_filt4">
                 <label for="input_filt">
@@ -81,10 +84,11 @@
                   16tadan ko’p
                 </label>
               </div>
+              </b-collapse>
             </div>
             <div class="filt_category">
               <div class="filt_category_title">
-                <button>
+                <button v-b-toggle.collapse-3>
                   Kursning hajmi bo'yicha
 
                   <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,6 +97,7 @@
 
                 </button>
               </div>
+              <b-collapse id="collapse-3">
               <div class="filt_category_body">
                 <input type="radio" id="input_filt7">
                 <label for="input_filt">
@@ -111,6 +116,7 @@
                   16tadan ko’p
                 </label>
               </div>
+              </b-collapse>
             </div>
           </div>
           <div class="col-xl-9">

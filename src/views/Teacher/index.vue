@@ -10,7 +10,8 @@
             <div class="sp-tab sp-active"><span class="d-flex align-items-center">
                Асосий </span>
             </div>
-            <div class="sp-tab "><span class="d-flex align-items-center">
+            <div class="sp-tab ">
+              <span class="d-flex align-items-center">
                Темперамент </span>
             </div>
             <div class="sp-tab "><span class="d-flex align-items-center">

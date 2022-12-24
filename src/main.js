@@ -23,6 +23,8 @@ Vue.use(VueApexCharts)
 
 Vue.component('apexchart', VueApexCharts)
 
+
+
 new Vue({
   router,
   store,
