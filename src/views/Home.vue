@@ -5,18 +5,17 @@
       <div class=" first_section">
 
         <video autoplay muted loop id="myVideo">
-          <source src="../assets/images/912899371.mp4" type="video/mp4">
+          <source src="../assets/images/boyicha.mp4" type="video/mp4">
         </video>
-        <VueSlickCarousel v-bind="settings" ref="carousel">
+        <VueSlickCarousel v-bind="settings" ref="carousel" v-if="$store.state.banners.length>0">
 
-          <div class="slid_bg" v-for="(item,index) in 2" :key="index">
+          <div class="slid_bg" v-for="(item,index) in $store.state.banners" :key="index">
 
             <div class="bg_margin">
               <div class="bg_title">
-                KASB MAKTAB.UZ
+                {{ item.title }}
               </div>
-              <div class="bg_description">
-                Бесплатная программа обучения, проферентаций и карьерного сопровождения
+              <div class="bg_description" v-html="item.description">
               </div>
             </div>
           </div>
@@ -44,7 +43,7 @@
         </div>
         <div class="progress_bar">
           <progress-bar
-              v-for="(ban, i) in 4"
+              v-for="(ban, i) in $store.state.banners.length"
               :key="i"
               id="sliderProgress"
               :class="{ 'active': activeIndex == i }"
@@ -80,7 +79,7 @@
                   </router-link>
                 </div>
                 <div>
-                  <router-link class="link_main_calk decoration" to="/">
+                  <router-link class="link_main_calk decoration" to="/calculator">
                     <div>
                       kalkulyator
                     </div>
@@ -106,53 +105,17 @@
     <section class="three_section">
       <div class="container">
         <div class="row">
-          <div class="col-xl-4">
+          <div class="col-xl-4" v-for="(item,ser) in $store.state.services " :key="ser">
             <div class="section_category">
               <div class="category_icon">
-                <img src="../assets/logo/checklist.svg" alt="">
+                <img :src="item.icon" alt="" width="100px">
               </div>
               <div class="category_text">
                 <div class="category_title">
-                  Onlayn test
+                  {{item.title}}
                 </div>
-                <div class="category_description">
-                  Ro'yxatdan o'tish va shaharning
-                  narigi tomoniga borish shart emas.
-                  Kompyuter yoki planshet yetarli
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4">
+                <div class="category_description" v-html="item.description">
 
-            <div class="section_category">
-              <div class="category_icon">
-                <img src="../assets/logo/clock.svg" alt="">
-              </div>
-              <div class="category_text">
-                <div class="category_title">
-                  Qulay o'tish vaqti
-                </div>
-                <div class="category_description">
-                  Sinovning umumiy vaqti 1,5-2 soat davom etadi, ammo sizning qulayligingiz uchun u siz uchun qulay
-                  bo'lgan har qanday vaqtda o'tkazilishi mumkin bo'lgan 14 ta subtestga bo'lingan
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4">
-
-            <div class="section_category">
-              <div class="category_icon">
-                <img src="../assets/logo/shopping.svg" alt="">
-              </div>
-              <div class="category_text">
-                <div class="category_title">
-                  O'rta maktab o'quvchilari uchun javob beradi
-                </div>
-                <div class="category_description">
-                  Amaldagi usullar allaqachon ish tajribasiga ega bo'lgan kattalar uchun ham, odamlar uchun ham, o'rta
-                  maktab o'quvchilari va maktab bitiruvchilari uchun ham bir xil darajada yaxshi ishlaydi
                 </div>
               </div>
             </div>
@@ -217,142 +180,140 @@
         </div>
       </div>
     </section>
-    <section class="five_section">
-      <div class="container">
-        <div class="stats_title">
-          <h1>Узнай, какими навыками обладаешь</h1>
-          <div class="stats_desc">
-            Важно определить, каким набором навыков ты обладаешь еще до начала поисков профессии
-          </div>
-        </div>
-        <div class="stats_main">
-          <div class="row">
-            <div class="col-xl-6">
-              <div class="stats_ranges">
-                <div class="range_title">Интересы и предпочтения </div>
-                <div class="range_body">
-                  <label>Техника и технологий </label>
-                  <range-slider
-                      class="slider"
-                      min="10"
-                      max="1000"
-                      step="10"
-                      v-model="sliderValue">
-                  </range-slider>
-                  <div class="rage_count">
-                    87
-                  </div>
-                </div>
-                <div class="range_body">
-                  <label>Анализ информации </label>
-                  <range-slider
-                      class="slider"
-                      min="10"
-                      max="1000"
-                      step="10"
-                      v-model="sliderValue">
-                  </range-slider>
-                  <div class="rage_count">
-                    87
-                  </div>
-                </div>
-                <div class="range_body">
-                  <label>Физическое развитие </label>
-                  <range-slider
-                      class="slider"
-                      min="10"
-                      max="1000"
-                      step="10"
-                      v-model="sliderValue">
-                  </range-slider>
-                  <div class="rage_count">
-                    87
-                  </div>
-                </div>
-                <div class="range_body">
-                  <label>Бизнес и управление </label>
-                  <range-slider
-                      class="slider"
-                      min="10"
-                      max="1000"
-                      step="10"
-                      v-model="sliderValue">
-                  </range-slider>
-                  <div class="rage_count">
-                    87
-                  </div>
-                </div>
-                <div class="range_body">
-                  <label>Творчество и искусство </label>
-                  <range-slider
-                      class="slider"
-                      min="10"
-                      max="1000"
-                      step="10"
-                      v-model="sliderValue">
-                  </range-slider>
-                  <div class="rage_count">
-                    87
-                  </div>
-                </div>
-                <div class="range_body">
-                  <label>Люди и отношения  </label>
-                  <range-slider
-                      class="slider"
-                      min="10"
-                      max="1000"
-                      step="10"
-                      v-model="sliderValue">
-                  </range-slider>
-                  <div class="rage_count">
-                    87
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6">
+<!--    <section class="five_section">-->
+<!--      <div class="container">-->
+<!--        <div class="stats_title">-->
+<!--          <h1>Узнай, какими навыками обладаешь</h1>-->
+<!--          <div class="stats_desc">-->
+<!--            Важно определить, каким набором навыков ты обладаешь еще до начала поисков профессии-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="stats_main">-->
+<!--          <div class="row">-->
+<!--            <div class="col-xl-6">-->
+<!--              <div class="stats_ranges">-->
+<!--                <div class="range_title">Интересы и предпочтения </div>-->
+<!--                <div class="range_body">-->
+<!--                  <label>Техника и технологий </label>-->
+<!--                  <range-slider-->
+<!--                      class="slider"-->
+<!--                      min="10"-->
+<!--                      max="1000"-->
+<!--                      step="10"-->
+<!--                      v-model="sliderValue">-->
+<!--                  </range-slider>-->
+<!--                  <div class="rage_count">-->
+<!--                    87-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="range_body">-->
+<!--                  <label>Анализ информации </label>-->
+<!--                  <range-slider-->
+<!--                      class="slider"-->
+<!--                      min="10"-->
+<!--                      max="1000"-->
+<!--                      step="10"-->
+<!--                      v-model="sliderValue">-->
+<!--                  </range-slider>-->
+<!--                  <div class="rage_count">-->
+<!--                    87-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="range_body">-->
+<!--                  <label>Физическое развитие </label>-->
+<!--                  <range-slider-->
+<!--                      class="slider"-->
+<!--                      min="10"-->
+<!--                      max="1000"-->
+<!--                      step="10"-->
+<!--                      v-model="sliderValue">-->
+<!--                  </range-slider>-->
+<!--                  <div class="rage_count">-->
+<!--                    87-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="range_body">-->
+<!--                  <label>Бизнес и управление </label>-->
+<!--                  <range-slider-->
+<!--                      class="slider"-->
+<!--                      min="10"-->
+<!--                      max="1000"-->
+<!--                      step="10"-->
+<!--                      v-model="sliderValue">-->
+<!--                  </range-slider>-->
+<!--                  <div class="rage_count">-->
+<!--                    87-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="range_body">-->
+<!--                  <label>Творчество и искусство </label>-->
+<!--                  <range-slider-->
+<!--                      class="slider"-->
+<!--                      min="10"-->
+<!--                      max="1000"-->
+<!--                      step="10"-->
+<!--                      v-model="sliderValue">-->
+<!--                  </range-slider>-->
+<!--                  <div class="rage_count">-->
+<!--                    87-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="range_body">-->
+<!--                  <label>Люди и отношения  </label>-->
+<!--                  <range-slider-->
+<!--                      class="slider"-->
+<!--                      min="10"-->
+<!--                      max="1000"-->
+<!--                      step="10"-->
+<!--                      v-model="sliderValue">-->
+<!--                  </range-slider>-->
+<!--                  <div class="rage_count">-->
+<!--                    87-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-6">-->
 
-              <div class="stats_ranges">
-                <div class="world_title">Интересы и предпочтения </div>
-                <div class="world_desc">
-                  <div>
-                    Конструирование и математика
-                  </div>
-                </div>
-                <div class="web_img">
-                  <img src="../assets/images/web.jpg" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--              <div class="stats_ranges">-->
+<!--                <div class="world_title">Интересы и предпочтения </div>-->
+<!--                <div class="world_desc">-->
+<!--                  <div>-->
+<!--                    Конструирование и математика-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="web_img">-->
+<!--                  <img src="../assets/images/web.jpg" alt="">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
     <section class="sex_section">
       <div class="container">
         <div class="row">
-          <div class="col-xl-4" v-for="(item,index) in 3" :key="index">
+          <div class="col-xl-4" v-for="(item,index) in $store.state.universitiestop.results" :key="index+'a'">
             <div class="uni_card">
               <div class="uni_card_title">
-                Мировой
+                {{item.title}}
               </div>
              <router-link class="decoration" to="/">
                <div class="image_group">
-                 <img src="../assets/images/rectangle.png" alt="">
+                 <img :src="item.image_url" alt="">
                  <div class="absolute_text">
-                   Стэнфордский Университет
+                    {{item.short_description}}
                  </div>
                </div>
              </router-link>
               <div class="more_uni">
-                <router-link to="/" class="decoration">
+                <router-link to="/universities" class="decoration">
                   Полный Список Университетов
                 </router-link>
               </div>
             </div>
           </div>
-          <div class="col-xl-4"></div>
-          <div class="col-xl-4"></div>
         </div>
       </div>
     </section>
@@ -387,11 +348,11 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-import RangeSlider from 'vue-range-slider'
+// import RangeSlider from 'vue-range-slider'
 // you probably need to import built-in style
 import 'vue-range-slider/dist/vue-range-slider.css'
 export default {
-  components: {Footer, Header, VueSlickCarousel,RangeSlider},
+  components: {Footer, Header, VueSlickCarousel},
   data() {
     return {
       sliderValue: 50,
@@ -453,7 +414,7 @@ export default {
     next() {
 
       clearTimeout(this.timeId);
-      if (this.activeIndex === 3) {
+      if (this.activeIndex === (this.$store.state.banners.length-1)) {
         this.activeIndex = 0;
       } else {
         this.activeIndex += 1;
@@ -474,6 +435,10 @@ export default {
     this.intervalId = setInterval(() => {
       this.value += 1;
     }, 20);
+    this.$store.dispatch('getBanners')
+    this.$store.dispatch('getServices')
+    this.$store.dispatch('getUniversityTop')
+    this.$store.dispatch('getNews')
   },
   destroyed() {
     clearInterval(this.intervalId);

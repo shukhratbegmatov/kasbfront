@@ -33,18 +33,18 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xl-4" v-for="(item,index) in 27" :key="index">
+          <div class="col-xl-4" v-for="(item,index) in $store.state.professions_web.results" :key="index">
             <div class="prof_card">
                 <div>
-                  <div class="prof_title">Kiberxavfsizlik tahlilchisi</div>
-                  <div class="prof_desc">Ish joyi: Ish odatda ofisda boʻlib, ba'zi ishlarni uydan turib ishlash mumkin. Mijozlar bilan uchrashish uchun safarga chiqish talab qilinadi.</div>
-                  <div class="prof_price">Maoshi: 5000000 - 25000000</div>
+                  <div class="prof_title mb-3">{{item.title}}</div>
+                  <div class="prof_desc">{{item.workplace}}</div>
+                  <div class="prof_price">Maoshi: {{item.min_salary}} - {{item.max_salary}}</div>
                   <div class="prof_link">
-                    <router-link class="decoration" to="/">Batafsil</router-link>
+                    <router-link class="decoration" :to="`/professions/${item.id}`">Batafsil</router-link>
                   </div>
                 </div>
-                <div class="card_img">
-                  <img src="../assets/images/prof.png" alt="">
+                <div class="card_img ml-3">
+                  <img :src="item.cover_image_url" alt="">
                 </div>
             </div>
           </div>
@@ -75,6 +75,9 @@ export default {
         text: ''
       },
     }
+  },
+  mounted() {
+    this.$store.dispatch('getProfision')
   }
 }
 </script>

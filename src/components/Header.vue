@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="mobile_menu" :class="{'active':isActiveM}">
+    <div class="test_rejm"><marquee>Sayt test rejimida ishlaydi</marquee></div>
+    <div class="mobile_menu" :class="{'active':isActiveM}" v-if="$store.state.headers">
        <div class="mob_menus">
         <ul>
           <li>
@@ -63,26 +64,11 @@
                   </svg>
                 </button>
               </div>
-              <div class="collapses">
+              <div class="collapses" >
                 <ul class="navbar">
-                  <li class="nav-item">
-                    <router-link to="/professions" class="nav-link">
-                      Kasblar
-                    </router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link to="/intro-resume" class="nav-link">
-                      REZYUME YARATING
-                    </router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link to="/about" class="nav-link">
-                      biz haqimizda
-                    </router-link>
-                  </li>
-                  <li class="nav-item">
-                    <router-link to="/trainings" class="nav-link">
-                      KURSLAR
+                  <li class="nav-item" v-for="(item,index) in $store.state.headers.menus" :key="index">
+                    <router-link :to="item.url" class="nav-link">
+                      {{item.title}}
                     </router-link>
                   </li>
                 </ul>
@@ -119,6 +105,9 @@ export default {
     return{
       isActiveM:false
     }
+  },
+  mounted() {
+    this.$store.dispatch('getMenus')
   }
 }
 </script>

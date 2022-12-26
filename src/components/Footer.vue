@@ -29,31 +29,11 @@
             </div>
           </div>
           <div class="col-xl-4">
-              <div class="footer_path">
-                <router-link class="decoration" to="/">
-                  KAsblar
+              <div class="footer_path" v-for="(item,index) in $store.state.headers.menus" :key="index">
+                <router-link class="decoration" :to="item.url" >
+                  {{item.title}}
                 </router-link>
               </div>
-            <div class="footer_path">
-              <router-link class="decoration" to="/">
-                KURSLAR
-              </router-link>
-            </div>
-            <div class="footer_path">
-              <router-link class="decoration" to="/">
-                Kontaklar
-              </router-link>
-            </div>
-            <div class="footer_path">
-              <router-link class="decoration" to="/">
-                BIZ HAQIMIZDA
-              </router-link>
-            </div>
-            <div class="footer_path">
-              <router-link class="decoration" to="/">
-                REZYUME YARATING
-              </router-link>
-            </div>
           </div>
           <div class="col-xl-4">
               <div class="messengers">
@@ -73,3 +53,11 @@
     </footer>
   </div>
 </template>
+<script>
+export default {
+
+  mounted() {
+    this.$store.dispatch('getMenus')
+  }
+}
+</script>

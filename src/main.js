@@ -10,7 +10,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-search-select/dist/VueSearchSelect.css'
 import ProgressBar from 'vuejs-progress-bar'
 Vue.use(ProgressBar)
-import './views/Teacher/css/teacherstyles.css'
 import './assets/css/style.css'
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
@@ -18,6 +17,8 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.config.productionTip = false
 
+import axios from "axios"
+axios.defaults.axiosDefoult = "https://api-kasb.uzedu.uz/api/v1/";
 import VueApexCharts from 'vue-apexcharts'
 Vue.use(VueApexCharts)
 

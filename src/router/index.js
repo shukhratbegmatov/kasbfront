@@ -13,12 +13,29 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: () => import( '../views/About.vue')
+    component: () => import( '../views/About.vue'),
+
+
   },
   {
     path: '/professions',
     name: 'Professions',
     component: () => import( '../views/Professions.vue')
+  },
+  {
+    path: '/professions/:id',
+    name: 'Professions',
+    component: () => import( '../views/professionsSingle')
+  },
+  {
+    path: '/universities',
+    name: 'Professions',
+    component: () => import( '../views/universities')
+  },
+  {
+    path: '/universities/:id',
+    name: 'Professions',
+    component: () => import( '../views/universitiesSingle')
   },
   {
     path: '/intro-resume',
@@ -29,6 +46,11 @@ const routes = [
     path: '/trainings',
     name: 'Trainings',
     component: () => import( '../views/Trainings.vue')
+  },
+  {
+    path: '/calculator',
+    name: 'Trainings',
+    component: () => import( '../views/Calculator.vue')
   },
   {
     path: '/login',
@@ -51,69 +73,66 @@ const routes = [
   {
     path: '/profile',
     name: 'MainProfile',
-    component: () => import( '../views/Auth/ProfileStudent/index')
+    component: () => import( '../views/Auth/ProfileStudent/index'),
+
   },
 
   {
     path: '/test-result',
     name: 'TestResult',
-    component: () => import( '../views/Auth/ProfileStudent/testresult.vue')
+    component: () => import( '../views/Auth/ProfileStudent/testresult.vue'),
+
   },
 
   {
     path: '/tab/trainings',
     name: 'TestResult',
-    component: () => import( '../views/Auth/ProfileStudent/trainings')
+    component: () => import( '../views/Auth/ProfileStudent/trainings'),
+
   },
   {
     path: '/wishlist',
     name: 'TestResult',
-    component: () => import( '../views/Auth/ProfileStudent/wishlist')
+    component: () => import( '../views/Auth/ProfileStudent/wishlist'),
+
   },
 
   {
     path: '/my-resume',
     name: 'TestResult',
-    component: () => import( '../views/Auth/ProfileStudent/my-resume')
+    component: () => import( '../views/Auth/ProfileStudent/my-resume'),
+
   },
   {
     path: '/start-test',
     name: 'TestResult',
-    component: () => import( '../views/Quiz/start-test')
+    component: () => import( '../views/Quiz/start-test'),
+
   },
   {
     path: '/on-test',
     name: 'TestResult',
-    component: () => import( '../views/Quiz/on-test')
+    component: () => import( '../views/Quiz/on-test'),
   },
   {
     path: '/settings',
     name: 'TestResult',
-    component: () => import( '../views/Auth/ProfileStudent/settings')
+    component: () => import( '../views/Auth/ProfileStudent/settings'),
   },
   {
     path: '/to-test',
     name: 'TestResult',
-    component: () => import( '../views/Quiz/to-test')
+    component: () => import( '../views/Quiz/to-test'),
+
   },
   {
     path: '/there-test',
     name: 'TestResult',
-    component: () => import( '../views/Quiz/three')
+    component: () => import( '../views/Quiz/three'),
+
   },
 
-    //Teachers page
 
-  {
-    path: '/teacher-login',
-    name: 'TestResult',
-    component: () => import( '../views/Teacher/login')
-  },
-  {
-    path: '/teacher-dashboard',
-    name: 'TestResult',
-    component: () => import( '../views/Teacher/index')
-  },
 
 ]
 
@@ -121,6 +140,20 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
+// router.beforeEach((to, from, next) => {
+//   if (to.matched.some(record => record.meta.requiresAuth)) {
+//     // this route requires auth, check if logged in
+//     // if not, redirect to login page.
+//     if (!localStorage.getItem('token')) {
+//       next({ name: 'Home' })
+//
+//     } else {
+//       next() // go to wherever I'm going
+//     }
+//   } else {
+//     next() // does not require auth, make sure to always call next()!
+//   }
+// });
 export default router
