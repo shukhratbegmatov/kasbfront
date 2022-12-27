@@ -10,7 +10,7 @@
             <div class="col-xl-6">
               <router-link to="/email-login" class="decoration">
                 <div class="logo_email">
-                  <div>EMAIL</div>
+                  <div>Email</div>
 
                   <img src="../../../assets/images/image56.svg" alt="">
 
@@ -20,7 +20,7 @@
             <div class="col-xl-6">
               <router-link to="/" class="decoration">
                 <div class="logo_email">
-                  <div>Телефонный номер</div>
+                  <div>Telefon raqam</div>
 
                   <img src="../../../assets/images/image55.svg" alt="">
                 </div>
@@ -28,10 +28,10 @@
             </div>
           </div>
           <div class="reg_link_title">
-            еще не зарегистрировались
+            Ro'yxatdan o'tish
           </div>
           <div class="reg_link">
-            <router-link to="/registration" class="decoration"> Зарегистрироваться</router-link>
+            <router-link to="/registration" class="decoration"> Registratsiya</router-link>
           </div>
         </div>
     </div>

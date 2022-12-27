@@ -5,7 +5,7 @@
       <div class=" first_section">
 
         <video autoplay muted loop id="myVideo">
-          <source src="../assets/images/boyicha.mp4" type="video/mp4">
+          <source src="../assets/images/Kasbuzeduuz-1.mp4" type="video/mp4">
         </video>
         <VueSlickCarousel v-bind="settings" ref="carousel" v-if="$store.state.banners.length>0">
 
@@ -180,117 +180,6 @@
         </div>
       </div>
     </section>
-<!--    <section class="five_section">-->
-<!--      <div class="container">-->
-<!--        <div class="stats_title">-->
-<!--          <h1>Узнай, какими навыками обладаешь</h1>-->
-<!--          <div class="stats_desc">-->
-<!--            Важно определить, каким набором навыков ты обладаешь еще до начала поисков профессии-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="stats_main">-->
-<!--          <div class="row">-->
-<!--            <div class="col-xl-6">-->
-<!--              <div class="stats_ranges">-->
-<!--                <div class="range_title">Интересы и предпочтения </div>-->
-<!--                <div class="range_body">-->
-<!--                  <label>Техника и технологий </label>-->
-<!--                  <range-slider-->
-<!--                      class="slider"-->
-<!--                      min="10"-->
-<!--                      max="1000"-->
-<!--                      step="10"-->
-<!--                      v-model="sliderValue">-->
-<!--                  </range-slider>-->
-<!--                  <div class="rage_count">-->
-<!--                    87-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="range_body">-->
-<!--                  <label>Анализ информации </label>-->
-<!--                  <range-slider-->
-<!--                      class="slider"-->
-<!--                      min="10"-->
-<!--                      max="1000"-->
-<!--                      step="10"-->
-<!--                      v-model="sliderValue">-->
-<!--                  </range-slider>-->
-<!--                  <div class="rage_count">-->
-<!--                    87-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="range_body">-->
-<!--                  <label>Физическое развитие </label>-->
-<!--                  <range-slider-->
-<!--                      class="slider"-->
-<!--                      min="10"-->
-<!--                      max="1000"-->
-<!--                      step="10"-->
-<!--                      v-model="sliderValue">-->
-<!--                  </range-slider>-->
-<!--                  <div class="rage_count">-->
-<!--                    87-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="range_body">-->
-<!--                  <label>Бизнес и управление </label>-->
-<!--                  <range-slider-->
-<!--                      class="slider"-->
-<!--                      min="10"-->
-<!--                      max="1000"-->
-<!--                      step="10"-->
-<!--                      v-model="sliderValue">-->
-<!--                  </range-slider>-->
-<!--                  <div class="rage_count">-->
-<!--                    87-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="range_body">-->
-<!--                  <label>Творчество и искусство </label>-->
-<!--                  <range-slider-->
-<!--                      class="slider"-->
-<!--                      min="10"-->
-<!--                      max="1000"-->
-<!--                      step="10"-->
-<!--                      v-model="sliderValue">-->
-<!--                  </range-slider>-->
-<!--                  <div class="rage_count">-->
-<!--                    87-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="range_body">-->
-<!--                  <label>Люди и отношения  </label>-->
-<!--                  <range-slider-->
-<!--                      class="slider"-->
-<!--                      min="10"-->
-<!--                      max="1000"-->
-<!--                      step="10"-->
-<!--                      v-model="sliderValue">-->
-<!--                  </range-slider>-->
-<!--                  <div class="rage_count">-->
-<!--                    87-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-xl-6">-->
-
-<!--              <div class="stats_ranges">-->
-<!--                <div class="world_title">Интересы и предпочтения </div>-->
-<!--                <div class="world_desc">-->
-<!--                  <div>-->
-<!--                    Конструирование и математика-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="web_img">-->
-<!--                  <img src="../assets/images/web.jpg" alt="">-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
     <section class="sex_section">
       <div class="container">
         <div class="row">
@@ -324,7 +213,7 @@
           <div class="col-xl-4" v-for="(item,index) in 6" :key="index">
             <router-link to="/" class="decoration">
               <div class="news_main">
-                <img src="../assets/images/news.png" alt="">
+                <img src="../assets/images/image2.png" alt="">
                 <div class="news_body">
                   <div class="news_date">10</div>
                   <div class="news_month">Октября</div>

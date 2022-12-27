@@ -96,6 +96,24 @@ const routes = [
     component: () => import( '../views/Auth/ProfileStudent/wishlist'),
 
   },
+  {
+    path: '/profile/email-verify',
+    name: 'ProfileEmail',
+    component: () => import( '../views/Auth/ProfileStudent/email-verify'),
+
+  },
+  {
+    path: '/student/email-verify',
+    name: 'ProfileEmail',
+    component: () => import( '../views/Auth/ProfileStudent/student_reg'),
+
+  },
+  {
+    path: '/teacher/email-verify',
+    name: 'ProfileEmail',
+    component: () => import( '../views/Auth/ProfileStudent/teacher_reg'),
+
+  },
 
   {
     path: '/my-resume',

@@ -5,10 +5,10 @@
         <div class="card_check">
           <div class="row">
           <div class="col-xl-3" v-for="(item,index) in $store.state.subjects" :key="index">
-            <label :for="`check${index}`" class="label_btn">
+            <button @click="getWork(item)" :for="`check${index}`" class="label_btn">
               {{item.title}}
               <input type="checkbox" :id="`check${index}`">
-            </label>
+            </button>
           </div>
             </div>
           <div>
@@ -52,8 +52,20 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default {
   components: {Footer, Header},
+  data(){
+    return{
+      cres:[],
+      subId:[]
+    }
+  },
   mounted() {
     this.$store.dispatch('getSubjects')
+  },
+  methods:{
+    getWork(){
+      this.$store.dispatch('getSubjectWork')
+    }
   }
+
 }
 </script>

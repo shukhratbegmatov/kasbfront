@@ -16,33 +16,12 @@
           </div>
           <div class="border_main"></div>
          <div class="reg_forms">
-           <form action="">
+           <form @submit.prevent="regIstration()">
              <div class="input_text">
-               <input type="email" placeholder="Email">
+               <input type="email" v-model="email" placeholder="Email">
              </div>
              <div class="input_text">
-               <input type="password" placeholder="Password">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Серия паспорта">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Имя">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Фамилия">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Регион ">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Город/Район">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Школа">
-             </div>
-             <div class="input_text">
-               <input type="text" placeholder="Номер и буква класса">
+               <input type="password" v-model="password" placeholder="Password">
              </div>
              <div class="log_btn reg_btn">
                <button>Отправить</button>
@@ -59,6 +38,34 @@
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 export default {
-  components: {Footer, Header}
+  components: {Footer, Header},
+  data(){
+    return{
+      email:'',
+      password:''
+    }
+  },
+  methods:{
+    regIstration(){
+      this.$axiosDefault.post('/students/register/',{
+        "email":this.email,
+        "password":this.password
+      })
+      .then(()=>{
+        this.$toast("Emailga xabar jo'natildi iltimos tekshirib ko'ring", {
+          timeout: 10000,
+          type:"success"
+        });
+      })
+      .catch(()=>{
+        this.$toast("Bu email oldin ro'yxatdan o'tgan", {
+          timeout: 10000,
+          type:"error"
+        });
+      })
+
+    }
+  }
+
 }
 </script>

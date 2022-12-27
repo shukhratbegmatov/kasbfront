@@ -16,7 +16,7 @@
               <div class="col-xl-9">
 
                 <video controls width="100%">
-                  <source src="../../../assets/images/912899371.mp4" type="video/mp4">
+                  <source src="../../../assets/images/Kasbuzeduuz-1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="col-xl-3">

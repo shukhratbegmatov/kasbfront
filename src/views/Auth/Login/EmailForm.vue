@@ -4,7 +4,7 @@
     <div class="container">
       <div class="login">
         <div class="login_title">
-          Авторизация
+          Kirish
         </div>
         <div class="row">
           <div class="col-xl-4">
@@ -18,15 +18,15 @@
                    <input type="email" placeholder="Email">
                  </div>
                  <div class="input_text">
-                   <input type="password" placeholder="Password">
+                   <input type="password" placeholder="Parol">
                  </div>
                  <div class="forgot_password">
                    <router-link to="/" class="decoration">
-                     Сбросить пароль
+                    Parolni tiklash
                    </router-link>
                  </div>
                  <div class="log_btn">
-                   <button>Войти</button>
+                   <button> Kirish</button>
                  </div>
                </form>
              </div>

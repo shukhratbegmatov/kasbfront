@@ -15,13 +15,14 @@ export default new Vuex.Store({
     universitiessingle:{},
       professions_web:[],
       professions_websingle:[],
-      subjects:[]
+      subjects:[],
+      subjectswork:[]
   },
   mutations: {
   },
   actions: {
     getMenus({state}){
-          axios.get(`${state.baseUrl}/header`,{
+          axios.get(`${state.baseUrl}header/`,{
             'Accept-Language':'oz'
           })
           .then(res=>{
@@ -125,6 +126,18 @@ export default new Vuex.Store({
           })
               .then(res=>{
                   state.subjects=res.data
+                  console.log(router)
+              })
+      },
+      getSubjectWork({state}){
+          console.log(router.currentRoute)
+          axios.get(`${state.baseUrl}professions-web-calculator?subjects=$cre`,{
+              headers:{
+                  'Accept-Language':'oz'
+              }
+          })
+              .then(res=>{
+                  state.subjectswork=res.data
                   console.log(router)
               })
       },

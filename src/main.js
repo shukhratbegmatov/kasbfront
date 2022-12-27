@@ -16,9 +16,17 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 Vue.config.productionTip = false
+import Toast from "vue-toastification";
+// Import the CSS or use your own!
+import "vue-toastification/dist/index.css";
+const options = {
+  // You can set your default options here
+};
 
+Vue.use(Toast, options);
 import axios from "axios"
-axios.defaults.axiosDefoult = "https://api-kasb.uzedu.uz/api/v1/";
+axios.defaults.baseURL ="https://api-kasb.uzedu.uz/api/v1/";
+Vue.prototype.$axiosDefault = axios
 import VueApexCharts from 'vue-apexcharts'
 Vue.use(VueApexCharts)
 

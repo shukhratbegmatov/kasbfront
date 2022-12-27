@@ -17,7 +17,7 @@
               </div>
               <div class="resume_budy">
                 <div class="res_link">
-                  <router-link to="/" class="decoration">Boshlash</router-link>
+                  <a href="#" @click="error_func()" class="decoration">Boshlash</a>
                 </div>
                 <div class="res_card">
                   <div class="res_f">
@@ -150,7 +150,7 @@
               </div>
               <div class="link_into">
                 <div class="res_link">
-                  <router-link to="/" class="decoration">Boshlash</router-link>
+                  <a href="#" class="decoration" @click="error_func()">Boshlash</a>
                 </div>
               </div>
             </div>
@@ -170,6 +170,15 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default {
-  components: {Footer, Header}
+  components: {Footer, Header},
+  methods:{
+    error_func(){
+      this.$toast("Siz ro'yxatdan o'tmagansiz", {
+        timeout: 2000,
+        type:"error"
+      });
+    }
+
+  }
 }
 </script>
