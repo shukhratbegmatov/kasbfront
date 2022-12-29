@@ -3,15 +3,15 @@
     <Header></Header>
 
     <div class="container">
-      <h1 class="text-center h1_main"> РЕгистрация </h1>
+      <h1 class="text-center h1_main"> Ro'yxatdan o'tish </h1>
       <div class="reg_main">
         <div class="form_main">
           <div class="form_tab">
             <div class="tab_1 active">
-              <button>eMAIL</button>
+              <button>Email</button>
             </div>
             <div class="tab_1">
-              <button>Телефонный номер</button>
+              <button>Telefon raqam</button>
             </div>
           </div>
           <div class="border_main"></div>

@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header></Header>
-
     <div class="container">
       <h1 class="text-center h1_main"> Ro'yxatdan o'tish </h1>
       <div class="reg_main">

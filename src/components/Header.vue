@@ -49,12 +49,23 @@
               </div>
             </div>
           </div>
-          <div>
+          <div v-if="!$store.state.me">
             <router-link to="/login" class="decoration">
               <div>
-                Профиль
+                Kirish
               </div>
             </router-link>
+          </div>
+          <div v-if="$store.state.me">
+            <div class="Navbar__ProfileBtn-sc-1ic0ux9-2 feotWi" @click="$router.push('/profile')">
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em"
+                     fill="currentColor" class="icon">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                </svg>
+              </div>
+              <span class="username">Profil</span>
+            </div>
           </div>
 
         </div>
@@ -87,12 +98,23 @@
               </ul>
             </div>
             <div class="user_action">
-              <div>
+              <div v-if="!$store.state.me">
                 <router-link to="/login" class="decoration">
                   <div>
-                    Профиль
+                    Kirish
                   </div>
                 </router-link>
+              </div>
+              <div v-if="$store.state.me">
+                <div class="Navbar__ProfileBtn-sc-1ic0ux9-2 feotWi" @click="$router.push('/profile')">
+                  <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em"
+                         fill="currentColor" class="icon">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                    </svg>
+                  </div>
+                  <span class="username">Profil</span>
+                </div>
               </div>
               <div class="lang">
                   <span>
@@ -126,11 +148,12 @@ export default {
   data() {
     return {
       isActiveM: false,
-      isLang:false
+      isLang: false
     }
   },
   mounted() {
     this.$store.dispatch('getMenus')
+    this.$store.dispatch('getMe')
   }
 }
 </script>

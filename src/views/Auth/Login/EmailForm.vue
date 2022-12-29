@@ -13,12 +13,12 @@
           <div class="col-xl-4">
             <div class="log_form">
              <div>
-               <form action="">
+               <form @submit.prevent="login()">
                  <div class="input_text">
-                   <input type="email" placeholder="Email">
+                   <input type="email" v-model="email" placeholder="Email">
                  </div>
                  <div class="input_text">
-                   <input type="password" placeholder="Parol">
+                   <input type="password" v-model="password" placeholder="Parol">
                  </div>
                  <div class="forgot_password">
                    <router-link to="/" class="decoration">
@@ -46,6 +46,33 @@
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 export default {
-  components: {Footer, Header}
+  components: {Footer, Header},
+  data(){
+    return{
+      email:'',
+      password:''
+    }
+  },
+  methods:{
+    login(){
+      this.$axiosDefault.post('/students/login/',{
+        "email":this.email,
+        "password":this.password
+      })
+          .then(res=>{
+            localStorage.setItem('reg_token',res.data.access)
+            this.$store.dispatch('getMe')
+            this.$router.push('/')
+
+            })
+          .catch(()=>{
+            this.$toast("Email yoki parol xato ", {
+              timeout: 2000,
+              type:"error"
+            });
+          })
+
+    }
+  }
 }
 </script>

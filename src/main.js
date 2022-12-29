@@ -22,7 +22,12 @@ import "vue-toastification/dist/index.css";
 const options = {
   // You can set your default options here
 };
+import SweetAlertIcons from 'vue-sweetalert-icons';
+import 'vue-loaders/dist/vue-loaders.css';
+import * as VueLoaders from 'vue-loaders';
 
+Vue.use(VueLoaders);
+Vue.use(SweetAlertIcons);
 Vue.use(Toast, options);
 import axios from "axios"
 axios.defaults.baseURL ="https://api-kasb.uzedu.uz/api/v1/";

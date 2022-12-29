@@ -74,6 +74,9 @@ const routes = [
     path: '/profile',
     name: 'MainProfile',
     component: () => import( '../views/Auth/ProfileStudent/index'),
+    meta: {
+      requiresAuth: true
+    },
 
   },
 
@@ -81,6 +84,9 @@ const routes = [
     path: '/test-result',
     name: 'TestResult',
     component: () => import( '../views/Auth/ProfileStudent/testresult.vue'),
+    meta: {
+      requiresAuth: true
+    },
 
   },
 
@@ -119,6 +125,9 @@ const routes = [
     path: '/my-resume',
     name: 'TestResult',
     component: () => import( '../views/Auth/ProfileStudent/my-resume'),
+    meta: {
+      requiresAuth: true
+    },
 
   },
   {
@@ -160,18 +169,18 @@ const router = new VueRouter({
   routes
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//     // this route requires auth, check if logged in
-//     // if not, redirect to login page.
-//     if (!localStorage.getItem('token')) {
-//       next({ name: 'Home' })
-//
-//     } else {
-//       next() // go to wherever I'm going
-//     }
-//   } else {
-//     next() // does not require auth, make sure to always call next()!
-//   }
-// });
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // this route requires auth, check if logged in
+    // if not, redirect to login page.
+    if (!localStorage.getItem('reg_token')) {
+      next({ name: 'Home' })
+
+    } else {
+      next() // go to wherever I'm going
+    }
+  } else {
+    next() // does not require auth, make sure to always call next()!
+  }
+});
 export default router

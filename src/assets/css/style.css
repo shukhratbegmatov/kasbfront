@@ -773,6 +773,7 @@ footer {
 .uni_card img {
     width: 100%;
     margin-top: 18px;
+    height: 300px;
 }
 .uni_content{
     margin-top: 30px;
@@ -832,9 +833,10 @@ footer {
     font-family: 'InterMedium';
     font-style: normal;
     font-weight: 500;
-    font-size: 38px;
+    font-size: 33px;
     line-height: 46px;
     color: #2B2B2B;
+    min-height: 150px;
 }
 .main_uni{
     display: flex;
@@ -863,7 +865,7 @@ footer {
     line-height: 72px;
     color: #FFFFFF;
     width: 700px;
-    margin-top: 300px;
+    margin-top: 150px;
     margin-left: 80px;
 }
 .dark_description{
@@ -872,12 +874,12 @@ footer {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    text-transform: capitalize;
-    color: #FFFFFF;
-    width: 700px;
-    margin-left: 80px;
-    margin-top: 21px;
+    /* or 162% */
 
+    text-transform: capitalize;
+    padding: 20px;
+    color: #FFFFFF !important;
+    padding-left: 80px;
 }
 .skill_check{
     width: 40px;
@@ -977,8 +979,8 @@ footer {
     font-family: 'InterMedium';
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 24px;
     text-transform: uppercase;
     color: #FFFFFF;
 
@@ -3400,6 +3402,17 @@ h1 {
         margin: auto;
         margin-bottom: 80px;
     }
+    .form_tab{
+        display: block;
+    }
+    .tab_1 button{
+        padding: 0;
+        width: 300px;
+        font-size: 18px;
+    }
+    .input_text{
+        width: 100%;
+    }
     .border_div{
         display: none;
     }
@@ -3413,6 +3426,59 @@ h1 {
     .absolut1{
         position: relative;
     }
+}
+.wrapper {
+    background-color: white;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    width: 478px;
+    padding: 17px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+.mail_v{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 23;
+}
+.mail_v footer{
+    margin-top: 150px;
+}
+.btn_main{
+    background-color: rgb(140, 212, 245);
+    outline: none;
+    border: 0;
+}
+.feotWi {
+    background: rgb(244, 244, 244);
+    border-radius: 100px;
+    border: none;
+    padding: 3px 15px 3px 3px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.feotWi .icon-box {
+    color: rgb(255, 255, 255);
+    background:#0f054c;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.card_main_one{
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
 }
 @media (max-width: 700px) {
     .progress_bar{

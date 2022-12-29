@@ -183,14 +183,14 @@
     <section class="sex_section">
       <div class="container">
         <div class="row">
-          <div class="col-xl-4" v-for="(item,index) in $store.state.universitiestop.results" :key="index+'a'">
+          <div class="col-xl-4" v-for="(item,index) in $store.state.universitiestop.country" :key="index+'a'">
             <div class="uni_card">
               <div class="uni_card_title">
                 {{item.title}}
               </div>
-             <router-link class="decoration" to="/">
+             <router-link class="decoration" :to="`/universities/${item.id}`">
                <div class="image_group">
-                 <img :src="item.image_url" alt="">
+                 <img :src="item.cover_url" alt="">
                  <div class="absolute_text">
                     {{item.short_description}}
                  </div>
@@ -198,7 +198,7 @@
              </router-link>
               <div class="more_uni">
                 <router-link to="/universities" class="decoration">
-                  Полный Список Университетов
+                  Barcha universititutlar
                 </router-link>
               </div>
             </div>
@@ -208,16 +208,15 @@
     </section>
     <section class="news">
       <div class="container">
-        <h1>Новости</h1>
+        <h1>Yangiliklar</h1>
         <div class="row">
-          <div class="col-xl-4" v-for="(item,index) in 6" :key="index">
-            <router-link to="/" class="decoration">
+          <div class="col-xl-4" v-for="(item,index) in $store.state.news" :key="index">
+            <router-link :to="`/news/${item.id}`" class="decoration">
               <div class="news_main">
-                <img src="../assets/images/image2.png" alt="">
-                <div class="news_body">
-                  <div class="news_date">10</div>
-                  <div class="news_month">Октября</div>
-                  <div class="news_title">Планируется расширить выпуск количества учебников в 2023</div>
+                <img :src="item.cover_url" alt="">
+                <div class="news_body mt-4">
+                  <div class="news_date">{{new Date(item.publish_date).toLocaleString()}}</div>
+                  <div class="news_title">{{item.title}}</div>
                 </div>
               </div>
             </router-link>

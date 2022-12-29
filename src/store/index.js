@@ -16,11 +16,39 @@ export default new Vuex.Store({
       professions_web:[],
       professions_websingle:[],
       subjects:[],
-      subjectswork:[]
+      subjectswork:[],
+      isLoading:false,
+      refCount:0,
+      me:false
   },
-  mutations: {
-  },
+    mutations: {
+
+        loading(state, isLoading) {
+            console.log({isLoading})
+            if (isLoading) {
+                state.refCount++;
+                state.isLoading = true;
+            } else if (state.refCount > 0) {
+                state.refCount--;
+                state.isLoading = (state.refCount > 0);
+            }
+        },
+    },
   actions: {
+      getMe({state}){
+          axios.get(`${state.baseUrl}students/me/`,
+              {
+                  headers: {
+                      'Authorization': `Bearer ${localStorage.getItem('reg_token')}`,
+                      'Accept-Language':'oz'
+                  }
+              }
+              )
+              .then(res=>{
+                  state.me=res.data
+              })
+
+      },
     getMenus({state}){
           axios.get(`${state.baseUrl}header/`,{
             'Accept-Language':'oz'
